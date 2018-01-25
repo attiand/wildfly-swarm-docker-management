@@ -1,0 +1,16 @@
+
+swarm:
+  management:
+    security-realms:
+      ManagementRealm:
+        in-memory-authentication:
+          users:
+            bob:
+              password: TACOS!
+    http-interface-management-interface:
+      allowed-origins:
+       - http://localhost:8080              
+      security-realm: ManagementRealm
+    bind:
+      address: 0.0.0.0 # should exist according to https://github.com/wildfly-swarm/wildfly-swarm-reference-guide/blob/master/network.adoc
+ 
